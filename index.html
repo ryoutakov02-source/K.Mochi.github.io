@@ -66,38 +66,38 @@ function initDetailedMap(){
  svg.setAttribute('role','img');
  svg.setAttribute('aria-label','拡大・移動できる地形付き世界戦略地図');
  svg.innerHTML='<defs><linearGradient id="terrainSea" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#25474c"/><stop offset=".55" stop-color="#19363c"/><stop offset="1" stop-color="#122a31"/></linearGradient><pattern id="seaGrid" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M10 0H0V10" fill="none" stroke="#9bb5ad" stroke-opacity=".10" stroke-width=".12"/></pattern></defs><rect x="-180" y="-90" width="360" height="180" fill="url(#terrainSea)"/><rect x="-180" y="-90" width="360" height="180" fill="url(#seaGrid)"/><g class="ocean-grid"><path d="M-180 -60H180 M-180 -30H180 M-180 0H180 M-180 30H180 M-180 60H180 M-150 -90V90 M-120 -90V90 M-90 -90V90 M-60 -90V90 M-30 -90V90 M0 -90V90 M30 -90V90 M60 -90V90 M90 -90V90 M120 -90V90 M150 -90V90"/></g><g id="realCountries"></g><g id="realLakes"></g><g id="realRivers"></g><g id="relief"><path class="elevation" d="M-128 -59L-121 -57 -117 -50 -112 -43 -107 -34 -103 -28 -111 -27 -118 -33 -124 -43 -130 -50Z"/><path class="elevation" d="M-78 8L-73 10 -69 16 -68 25 -72 39 -76 50 -79 44 -78 31 -75 20Z"/><path class="elevation" d="M-6 -44L0 -47 8 -46 14 -45 18 -47 23 -45 26 -43 20 -41 12 -42 5 -41Z"/><path class="elevation" d="M64 -25L72 -31 83 -35 96 -35 106 -30 99 -27 85 -28 73 -26Z"/><path class="elevation" d="M127 -32L132 -38 138 -40 141 -37 137 -31 133 -29Z"/><path class="elevation" d="M140 -15L147 -22 154 -25 156 -19 151 -12 147 -10Z"/><path class="elevation" d="M-12 -30L-6 -31 4 -30 11 -31 16 -29 12 -27 1 -27 -8 -28Z"/><path class="elevation" d="M25 26L32 27 36 32 33 35 28 32Z"/><path class="ridge-shadow" d="M-126 -59L-121 -54 -119 -48 -114 -44 -111 -37 -106 -32 -103 -27 M-119 -58L-115 -51 -109 -48 -105 -42 -100 -38 -98 -31 M-82 7L-78 13 -76 20 -73 28 -73 37 -70 45 M-76 10L-72 19 -70 26 -68 33 -68 41 M-6 -44L-2 -46 1 -44 5 -45 8 -43 11 -45 15 -42 20 -43 M-3 -46L2 -44 5 -47 9 -44 13 -44 17 -42 M28 -44L31 -47 34 -44 38 -46 43 -43 47 -42 M35 -50L38 -54 41 -57 45 -60 50 -62 54 -65 60 -66 68 -67 76 -69 85 -69 95 -71 110 -69 M59 -36L65 -34 70 -31 75 -29 80 -30 86 -32 93 -32 99 -30 M64 -31L70 -29 77 -28 83 -29 89 -31 96 -30 M-77 12L-75 22 -72 32 -70 39 -68 47 -65 51"/></g><g class="maplabels"><text class="map-label continent-label" x="-111" y="-9">NORTH AMERICA</text><text class="map-label continent-label" x="-57" y="12">SOUTH AMERICA</text><text class="map-label continent-label" x="18" y="-10">AFRICA</text><text class="map-label continent-label" x="22" y="-18">EUROPE</text><text class="map-label continent-label" x="94" y="-2">ASIA</text><text class="map-label continent-label" x="135" y="4">OCEANIA</text><g class="lod-high"><text class="map-label mountain-label" x="-111" y="-47">ROCKY MOUNTAINS</text><text class="map-label mountain-label" x="-75" y="-33">APPALACHIANS</text><text class="map-label mountain-label" x="-71" y="28" transform="rotate(-70 -71 28)">ANDES</text><text class="map-label mountain-label" x="7" y="-48">ALPS</text><text class="map-label mountain-label" x="20" y="-44">CARPATHIANS</text><text class="map-label mountain-label" x="58" y="-56">URAL MOUNTAINS</text><text class="map-label mountain-label" x="43" y="-39">CAUCASUS</text><text class="map-label mountain-label" x="86" y="-30">HIMALAYAS</text><text class="map-label mountain-label" x="76" y="-34">HINDU KUSH</text><text class="map-label mountain-label" x="138" y="-37">JAPANESE ALPS</text><text class="map-label mountain-label" x="149" y="-28">GREAT DIVIDING RANGE</text><text class="map-label mountain-label" x="1" y="-31">ATLAS MOUNTAINS</text><text class="map-label mountain-label" x="30" y="31">DRAKENSBERG</text><text class="map-label mountain-label" x="52" y="-26">ZAGROS</text></g><g class="lod-mid"><g class="city-dots"><circle class="city-dot" cx="-74" cy="-41" r=".75"/><circle class="city-dot" cx="-118" cy="-34" r=".75"/><circle class="city-dot" cx="-87" cy="-42" r=".65"/><circle class="city-dot" cx="-77" cy="-39" r=".65"/><circle class="city-dot" cx="-99" cy="-19" r=".65"/><circle class="city-dot" cx="-43" cy="23" r=".65"/><circle class="city-dot" cx="-1" cy="-51.5" r=".65"/><circle class="city-dot" cx="2.35" cy="-48.8" r=".65"/><circle class="city-dot" cx="13.4" cy="-52.5" r=".65"/><circle class="city-dot" cx="12.5" cy="-41.9" r=".65"/><circle class="city-dot" cx="37.6" cy="-55.7" r=".75"/><circle class="city-dot" cx="30.3" cy="-59.9" r=".65"/><circle class="city-dot" cx="139.7" cy="-35.7" r=".75"/><circle class="city-dot" cx="135.5" cy="-34.7" r=".65"/><circle class="city-dot" cx="116.4" cy="-39.9" r=".65"/><circle class="city-dot" cx="121.5" cy="-31.2" r=".65"/><circle class="city-dot" cx="77.2" cy="-28.6" r=".65"/><circle class="city-dot" cx="31.2" cy="-30" r=".65"/><circle class="city-dot" cx="103.8" cy="-1.3" r=".65"/><circle class="city-dot" cx="151.2" cy="-33.9" r=".65"/></g><g class="cities lod-high"><text class="map-label city-label" x="-72" y="-42">New York</text><text class="map-label city-label" x="-116" y="-35">Los Angeles</text><text class="map-label city-label" x="-85" y="-43">Chicago</text><text class="map-label city-label" x="-75" y="-40">Washington</text><text class="map-label city-label" x="-97" y="-20">Mexico City</text><text class="map-label city-label" x="-41" y="22">Rio de Janeiro</text><text class="map-label city-label" x="0" y="-52">London</text><text class="map-label city-label" x="4" y="-49">Paris</text><text class="map-label city-label" x="15" y="-53">Berlin</text><text class="map-label city-label" x="14" y="-42">Rome</text><text class="map-label city-label" x="39" y="-56">Moscow</text><text class="map-label city-label" x="32" y="-60">Leningrad</text><text class="map-label city-label" x="141" y="-36">Tokyo</text><text class="map-label city-label" x="137" y="-35">Osaka</text><text class="map-label city-label" x="118" y="-40">Beijing</text><text class="map-label city-label" x="123" y="-31">Shanghai</text><text class="map-label city-label" x="79" y="-29">Delhi</text><text class="map-label city-label" x="33" y="-30">Cairo</text><text class="map-label city-label" x="105" y="-2">Singapore</text><text class="map-label city-label" x="153" y="-34">Sydney</text></g></g></g>';
-+ function geoPath(geometry){
-+  if(!geometry)return '';
-+  const parts=[];
-+  function ringPath(ring,close){
-+   let d='',last=null;
-+   for(const p of ring){const x=p[0],y=-p[1];if(last&&Math.abs(x-last[0])>180){if(close&&d)d+='Z ';d+='M'+x.toFixed(3)+' '+y.toFixed(3)+' ';}else d+=(d?'L':'M')+x.toFixed(3)+' '+y.toFixed(3)+' ';last=[x,y];}
-+   if(close)d+='Z ';
-+   return d;
-+  }
-+  function polygon(poly){return poly.map(r=>ringPath(r,true)).join(' ');}
-+  if(geometry.type==='Polygon')parts.push(polygon(geometry.coordinates));
-+  else if(geometry.type==='MultiPolygon')for(const p of geometry.coordinates)parts.push(polygon(p));
-+  else if(geometry.type==='LineString')parts.push(ringPath(geometry.coordinates,false));
-+  else if(geometry.type==='MultiLineString')for(const p of geometry.coordinates)parts.push(ringPath(p,false));
-+  return parts.join(' ');
-+ }
-+ const playableByName={'Japan':'JAP','Germany':'GER','United States of America':'USA','United States':'USA','Italy':'ITA','United Kingdom':'UK','France':'FRA','Russia':'SOV','Brazil':'BRA','China':'CHI','India':'RAJ','Australia':'AUS'};
-+ const palette={JAP:'#a85d4f',GER:'#8b7660',USA:'#526f9c',ITA:'#8c9b62',UK:'#7790aa',FRA:'#648a92',SOV:'#a05f58',BRA:'#6b8a5d',CHI:'#b49a5a',RAJ:'#9a855e',AUS:'#7b8969'};
-+ const countryLayer=svg.querySelector('#realCountries');
-+ for(const feature of WORLD_GEO_DATA.countries){
-+  const p=document.createElementNS(ns,'path'),name=feature.n,key=playableByName[name]||'';
-+  p.setAttribute('d',geoPath(feature.g));p.setAttribute('class','landmass'+(key?' country-fill':''));
-+  p.style.fill=key?palette[key]:'#697864';p.setAttribute('fill-rule','evenodd');p.setAttribute('stroke','#273b34');p.setAttribute('stroke-width','.28');
-+  if(key){p.setAttribute('data-country',key);p.setAttribute('tabindex','0');p.setAttribute('role','button');p.setAttribute('aria-label',name);}
-+  p.setAttribute('vector-effect','non-scaling-stroke');p.setAttribute('data-map-name',name);
-+  countryLayer.appendChild(p);
-+ }
-+ const lakeLayer=svg.querySelector('#realLakes');
-+ for(const feature of WORLD_GEO_DATA.lakes){const p=document.createElementNS(ns,'path');p.setAttribute('d',geoPath(feature.g));p.setAttribute('fill','#5b91a2');p.setAttribute('stroke','#92bcc3');p.setAttribute('stroke-width','.18');p.setAttribute('vector-effect','non-scaling-stroke');lakeLayer.appendChild(p);}
-+ const riverLayer=svg.querySelector('#realRivers');
-+ for(const feature of WORLD_GEO_DATA.rivers){const p=document.createElementNS(ns,'path');p.setAttribute('d',geoPath(feature.g));p.setAttribute('fill','none');p.setAttribute('stroke','#6da6b4');p.setAttribute('stroke-width','.24');p.setAttribute('stroke-linecap','round');p.setAttribute('vector-effect','non-scaling-stroke');riverLayer.appendChild(p);}
-+
+ function geoPath(geometry){
+  if(!geometry)return '';
+  const parts=[];
+  function ringPath(ring,close){
+   let d='',last=null;
+   for(const p of ring){const x=p[0],y=-p[1];if(last&&Math.abs(x-last[0])>180){if(close&&d)d+='Z ';d+='M'+x.toFixed(3)+' '+y.toFixed(3)+' ';}else d+=(d?'L':'M')+x.toFixed(3)+' '+y.toFixed(3)+' ';last=[x,y];}
+   if(close)d+='Z ';
+   return d;
+  }
+  function polygon(poly){return poly.map(r=>ringPath(r,true)).join(' ');}
+  if(geometry.type==='Polygon')parts.push(polygon(geometry.coordinates));
+  else if(geometry.type==='MultiPolygon')for(const p of geometry.coordinates)parts.push(polygon(p));
+  else if(geometry.type==='LineString')parts.push(ringPath(geometry.coordinates,false));
+  else if(geometry.type==='MultiLineString')for(const p of geometry.coordinates)parts.push(ringPath(p,false));
+  return parts.join(' ');
+ }
+ const playableByName={'Japan':'JAP','Germany':'GER','United States of America':'USA','United States':'USA','Italy':'ITA','United Kingdom':'UK','France':'FRA','Russia':'SOV','Brazil':'BRA','China':'CHI','India':'RAJ','Australia':'AUS'};
+ const palette={JAP:'#a85d4f',GER:'#8b7660',USA:'#526f9c',ITA:'#8c9b62',UK:'#7790aa',FRA:'#648a92',SOV:'#a05f58',BRA:'#6b8a5d',CHI:'#b49a5a',RAJ:'#9a855e',AUS:'#7b8969'};
+ const countryLayer=svg.querySelector('#realCountries');
+ for(const feature of WORLD_GEO_DATA.countries){
+  const p=document.createElementNS(ns,'path'),name=feature.n,key=playableByName[name]||'';
+  p.setAttribute('d',geoPath(feature.g));p.setAttribute('class','landmass'+(key?' country-fill':''));
+  p.style.fill=key?palette[key]:'#697864';p.setAttribute('fill-rule','evenodd');p.setAttribute('stroke','#273b34');p.setAttribute('stroke-width','.28');
+  if(key){p.setAttribute('data-country',key);p.setAttribute('tabindex','0');p.setAttribute('role','button');p.setAttribute('aria-label',name);}
+  p.setAttribute('vector-effect','non-scaling-stroke');p.setAttribute('data-map-name',name);
+  countryLayer.appendChild(p);
+ }
+ const lakeLayer=svg.querySelector('#realLakes');
+ for(const feature of WORLD_GEO_DATA.lakes){const p=document.createElementNS(ns,'path');p.setAttribute('d',geoPath(feature.g));p.setAttribute('fill','#5b91a2');p.setAttribute('stroke','#92bcc3');p.setAttribute('stroke-width','.18');p.setAttribute('vector-effect','non-scaling-stroke');lakeLayer.appendChild(p);}
+ const riverLayer=svg.querySelector('#realRivers');
+ for(const feature of WORLD_GEO_DATA.rivers){const p=document.createElementNS(ns,'path');p.setAttribute('d',geoPath(feature.g));p.setAttribute('fill','none');p.setAttribute('stroke','#6da6b4');p.setAttribute('stroke-width','.24');p.setAttribute('stroke-linecap','round');p.setAttribute('vector-effect','non-scaling-stroke');riverLayer.appendChild(p);}
+
  const wrap=document.getElementById('mapwrap');
  const oldMap=wrap.querySelector('.worldmap');
  if(oldMap)oldMap.setAttribute('aria-hidden','true');
